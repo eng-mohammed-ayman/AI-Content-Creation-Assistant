@@ -1,0 +1,4 @@
+google-generativeai
+replicate
+moviepy
+jupyterlab
