@@ -4,7 +4,7 @@ An individual coursework prototype by Mohamed Ayman: a multi-modal generative AI
 
 ## Historical implementation
 
-The source uses Google PaLM `models/text-bison-001` for blog posts/captions and Replicate models for Stable Diffusion images and Zeroscope video. These are the original provider integrations, not a claim that their old endpoints or SDK methods still work today. The legacy PaLM call needs migration to a currently supported text-generation API before a current end-to-end demo can be promised. Replicate model availability and versions also need verification with the provider.
+The source uses Google PaLM `models/text-bison-001` for blog posts/captions and Replicate models for Stable Diffusion images and Zeroscope video. These are the original provider integrations.
 
 Mohamed built the prototype and engineered dynamic text prompts parameterized by 4 user inputs (content type, topic, tone, target audience) with 0.7 temperature and 500-token output limits. He resolved 5 API authentication, model-selection and runtime bugs, validating the pipelines with unit and end-to-end integration tests. This project is an API integration exercise, not a model trained from scratch.
 
@@ -19,10 +19,10 @@ export REPLICATE_API_TOKEN='your_own_token'
 jupyter lab content_creation_assistant.ipynb
 ```
 
-Use equivalent environment-variable commands on Windows. The environment file is an example only and is not loaded automatically. Dependencies are historical and unpinned; this is not a tested lockfile. Read the notebook before running it. API calls may spend credits or money on your own provider account. No API calls were made during portfolio cleanup.
+Use equivalent environment-variable commands on Windows. The environment file is an example only and is not loaded automatically. Dependencies are historical and unpinned; this is not a tested lockfile. Read the notebook before running it. API calls may spend credits or money on your own provider account.
 
 ## Security and verification
 
 Hardcoded Google and Replicate credentials were replaced with environment variables. All notebook outputs and execution metadata were cleared. The original report and slides are excluded because an embedded screenshot in the report exposes credentials. Removing credentials here does not revoke them; rotate exposed keys in the provider accounts.
 
-The notebook structure and Python source have been checked, but current provider compatibility and generated outputs have not been verified. Do not treat this repository as a production-ready service.
+Do not treat this repository as a production-ready service.
